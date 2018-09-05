@@ -75,6 +75,10 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBh-rl-uqN"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rocket" translatesAutoresizingMaskIntoConstraints="NO" id="ztC-wG-nFq">
+                                <rect key="frame" x="48" y="631" width="278" height="494"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,6 +87,7 @@
                         <outlet property="falseButton" destination="YeR-hB-OVn" id="yaQ-68-vvv"/>
                         <outlet property="questionLabel" destination="77x-aj-WfG" id="Wiv-bV-Pbl"/>
                         <outlet property="restartButton" destination="0Ey-aa-xC1" id="mZO-KJ-pkc"/>
+                        <outlet property="rocket" destination="ztC-wG-nFq" id="8Fk-om-asD"/>
                         <outlet property="scoreLabel" destination="RHW-mC-SsL" id="NxG-Gs-mL3"/>
                         <outlet property="trueButton" destination="MFh-xv-rey" id="A2g-kz-T01"/>
                     </connections>
@@ -94,6 +99,7 @@
     </scenes>
     <resources>
         <image name="moon" width="100" height="100"/>
+        <image name="rocket" width="1111" height="1943"/>
         <image name="stars" width="1920" height="1077"/>
     </resources>
 </document>

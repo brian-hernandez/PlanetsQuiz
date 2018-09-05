@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
     @IBOutlet weak var trueButton: UIButton!
+    @IBOutlet weak var rocket: UIImageView!
     
     let quiz = QuestionBank()
     var questionNumber = 0
@@ -51,11 +52,13 @@ class ViewController: UIViewController {
             } else {
                 incorrect()
             }
-        } else if sender.tag == 3 {
-            restart()
         }
         
         questionNumber += 1
+        
+        if sender.tag == 3 {
+            restart()
+        }
         
         if totalQuestions > questionNumber {
             nextQuestion()
@@ -72,24 +75,37 @@ class ViewController: UIViewController {
     
     func correct() {
         score += 20
+        ProgressHUD.showSuccess("Correct!")
+        scoreLabel.text = "Score: \(score)"
     }
     
     func incorrect() {
-        print("Wrong")
+        ProgressHUD.showError("Incorrect!")
     }
     
     func nextQuestion() {
-        scoreLabel.text = "Score: \(score)"
         questionLabel.text = quiz.allQuestions[questionNumber].questionText
     }
     
     func restart() {
+        animateRocket()
         score = 0
         questionNumber = 0
+        scoreLabel.text = "Score: \(score)"
         restartButton.isHidden = true
         trueButton.isHidden = false
         falseButton.isHidden = false
         nextQuestion()
+    }
+    
+    func animateRocket() {
+        UIView.animate(withDuration: 2, animations: {() -> Void in
+            self.rocket.isHidden = false
+            self.rocket.frame.origin.y -= 2000
+        }, completion: { (finished: Bool) in
+            self.rocket.isHidden = true
+            self.rocket.frame = CGRect(x: 48, y: 631, width: 278, height: 494)
+        })
     }
     
 }
