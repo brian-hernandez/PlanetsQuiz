@@ -12,6 +12,8 @@
 		D3CAC5D5213F796F008317BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CAC5D3213F796F008317BE /* Main.storyboard */; };
 		D3CAC5D7213F796F008317BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3CAC5D6213F796F008317BE /* Assets.xcassets */; };
 		D3CAC5DA213F796F008317BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3CAC5D8213F796F008317BE /* LaunchScreen.storyboard */; };
+		D3CAC5E7213F7D79008317BE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CAC5E6213F7D79008317BE /* Question.swift */; };
+		D3CAC5E9213F7E21008317BE /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CAC5E8213F7E21008317BE /* QuestionBank.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D3CAC5D6213F796F008317BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3CAC5D9213F796F008317BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3CAC5DB213F796F008317BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3CAC5E6213F7D79008317BE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D3CAC5E8213F7E21008317BE /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		D3CAC5CE213F796F008317BE /* PlanetsQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				D3CAC5CF213F796F008317BE /* AppDelegate.swift */,
-				D3CAC5D1213F796F008317BE /* ViewController.swift */,
-				D3CAC5D3213F796F008317BE /* Main.storyboard */,
-				D3CAC5D6213F796F008317BE /* Assets.xcassets */,
-				D3CAC5D8213F796F008317BE /* LaunchScreen.storyboard */,
 				D3CAC5DB213F796F008317BE /* Info.plist */,
+				D3CAC5E1213F7C36008317BE /* Model */,
+				D3CAC5E2213F7C3E008317BE /* View */,
+				D3CAC5E3213F7C45008317BE /* Controller */,
+				D3CAC5E5213F7D24008317BE /* Supporting Files */,
+				D3CAC5D8213F796F008317BE /* LaunchScreen.storyboard */,
 			);
 			path = PlanetsQuiz;
+			sourceTree = "<group>";
+		};
+		D3CAC5E1213F7C36008317BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3CAC5E6213F7D79008317BE /* Question.swift */,
+				D3CAC5E8213F7E21008317BE /* QuestionBank.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3CAC5E2213F7C3E008317BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3CAC5D3213F796F008317BE /* Main.storyboard */,
+				D3CAC5D6213F796F008317BE /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3CAC5E3213F7C45008317BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3CAC5CF213F796F008317BE /* AppDelegate.swift */,
+				D3CAC5D1213F796F008317BE /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3CAC5E5213F7D24008317BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CAC5E7213F7D79008317BE /* Question.swift in Sources */,
+				D3CAC5E9213F7E21008317BE /* QuestionBank.swift in Sources */,
 				D3CAC5D2213F796F008317BE /* ViewController.swift in Sources */,
 				D3CAC5D0213F796F008317BE /* AppDelegate.swift in Sources */,
 			);
